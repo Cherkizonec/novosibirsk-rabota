@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Работа на складе в Новосибирске — вакансии склада | РаботаНСК</title>
+  <meta name="description" content="Работа на складе в Новосибирске: кладовщики, сборщики заказов, комплектовщики, упаковщики и грузчики. Сравните форматы и подберите подходящий вариант.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#19b85b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Работа на складе в Новосибирске">
+  <meta property="og:description" content="Складские вакансии в Новосибирске: сравните направления, график, район и требования.">
+
+  <style>
+    :root{
+      --green:#19b85b;--green2:#0d9849;--ink:#171a1d;--text:#25282c;--muted:#6e747b;
+      --bg:#f4f6f8;--card:#fff;--line:#e7eaed;--blue:#e8f2ff;--mint:#e8fbdc;
+      --yellow:#fff3bd;--shadow:0 18px 60px rgba(20,25,30,.08)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(15px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .header-inner{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .logo{font-size:25px;font-weight:950;letter-spacing:-1px;text-decoration:none}
+    .logo span{color:var(--green)}
+    nav{display:flex;gap:21px;align-items:center}
+    nav a{text-decoration:none;font-size:14px;font-weight:850;color:#4a4f55}
+    .header-btn{background:var(--green);color:#fff;text-decoration:none;font-weight:900;padding:13px 19px;border-radius:14px}
+
+    .breadcrumbs{padding:22px 0 0;font-size:14px;color:var(--muted)}
+    .breadcrumbs a{text-decoration:none}
+
+    .hero{padding:20px 0 32px}
+    .hero-box{
+      min-height:510px;border-radius:36px;overflow:hidden;display:grid;grid-template-columns:1.04fr .96fr;
+      background:radial-gradient(circle at 18% 14%,#ffffffb5 0 8%,transparent 28%),linear-gradient(135deg,#e9ffd3,#c1f184 55%,#7bd07e);
+      box-shadow:var(--shadow)
+    }
+    .hero-copy{padding:62px 28px 56px 62px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{display:inline-flex;align-self:flex-start;background:#fff;padding:9px 13px;border-radius:999px;font-weight:850;font-size:14px;margin-bottom:20px}
+    h1{font-size:clamp(43px,5vw,66px);line-height:1;letter-spacing:-3px;margin:0 0 22px;max-width:700px}
+    .hero-copy p{font-size:19px;line-height:1.55;color:#3b463e;margin:0 0 27px;max-width:620px}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
+    .btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;padding:0 23px;border-radius:15px;text-decoration:none;font-weight:900}
+    .btn-dark{background:#17191b;color:#fff}
+    .btn-white{background:#fff}
+    .hero-photo{position:relative;min-height:510px;padding:34px 38px 0 10px;display:flex;align-items:flex-end;justify-content:center}
+    .hero-photo:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#ffffff88;top:64px;right:58px}
+    .hero-photo img{position:relative;z-index:2;width:100%;max-width:470px;max-height:475px;object-fit:cover;object-position:center;border-radius:34px 34px 0 0;box-shadow:0 25px 70px #25351d30}
+
+    section{padding:58px 0}
+    .section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:27px}
+    .section-head h2{font-size:clamp(31px,3.5vw,45px);letter-spacing:-1.8px;line-height:1.05;margin:0}
+    .section-head p{max-width:570px;color:var(--muted);line-height:1.55;margin:0}
+
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .quick{background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px;min-height:170px}
+    .quick .icon{font-size:29px;margin-bottom:23px}
+    .quick strong{font-size:18px;display:block;margin-bottom:7px}
+    .quick p{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
+
+    .type-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+    .type-card{background:#fff;border-radius:27px;padding:26px;border:1px solid var(--line);box-shadow:0 10px 36px rgba(20,25,30,.045)}
+    .type-card:nth-child(1){background:var(--mint)}
+    .type-card:nth-child(2){background:var(--blue)}
+    .type-card:nth-child(3){background:var(--yellow)}
+    .type-card:nth-child(4){background:#f3eaff}
+    .type-icon{font-size:34px;margin-bottom:25px}
+    .type-card h3{font-size:22px;letter-spacing:-.7px;margin:0 0 10px}
+    .type-card p{margin:0 0 18px;color:#52585f;line-height:1.55;font-size:14px}
+    .tag-row{display:flex;flex-wrap:wrap;gap:7px}
+    .tag{background:#fff;padding:8px 10px;border-radius:999px;font-size:12px;font-weight:850}
+
+    .choose{background:#19201c;color:#fff;border-radius:34px;padding:48px}
+    .choose-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+    .choose h2{font-size:42px;letter-spacing:-1.8px;line-height:1.03;margin:0 0 15px}
+    .choose p{color:#c7ccc9;line-height:1.6}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .check{background:#ffffff0d;border:1px solid #ffffff17;border-radius:18px;padding:18px;line-height:1.45}
+    .check b{display:block;color:#bff28d;margin-bottom:5px}
+
+    .seo-text{background:#fff;border-radius:30px;padding:38px;border:1px solid var(--line)}
+    .seo-text h2{font-size:34px;letter-spacing:-1px;margin:0 0 18px}
+    .seo-text h3{font-size:23px;margin:28px 0 10px}
+    .seo-text p{line-height:1.75;color:#50565c;margin:0 0 13px}
+    .seo-text ul{line-height:1.75;color:#50565c;padding-left:22px}
+
+    .links-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .link-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px;text-decoration:none;transition:.18s transform}
+    .link-card:hover{transform:translateY(-3px)}
+    .link-card b{display:block;font-size:18px;margin-bottom:8px}
+    .link-card span{color:var(--muted);font-size:14px}
+
+    .faq{display:grid;gap:10px}
+    details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 20px}
+    summary{cursor:pointer;font-weight:900;padding:20px 0;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    details p{margin:0;padding:0 0 20px;line-height:1.6;color:#5b6167}
+
+    .cta{
+      background:linear-gradient(135deg,#d7ffad,#92e878);border-radius:35px;padding:52px;
+      display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center
+    }
+    .cta h2{font-size:40px;letter-spacing:-1.6px;line-height:1.05;margin:0 0 10px}
+    .cta p{margin:0;color:#465342;line-height:1.55;max-width:670px}
+
+    footer{margin-top:58px;background:#fff;border-top:1px solid var(--line);padding:35px 0 44px;color:#656b71;font-size:13px;line-height:1.65}
+    .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+    .footer-links{display:flex;gap:15px;flex-wrap:wrap}
+    .footer-links a{color:#3d4247}
+
+    @media(max-width:1000px){.type-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:900px){
+      nav{display:none}.hero-box{grid-template-columns:1fr}.hero-copy{padding:48px 28px 25px}
+      .hero-photo{min-height:390px;padding-top:0}.hero-photo:before{right:50%;transform:translateX(50%)}
+      .quick-grid{grid-template-columns:1fr 1fr}.choose-grid{grid-template-columns:1fr}.links-grid{grid-template-columns:1fr}.cta{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .container{width:min(100% - 24px,1160px)}h1{font-size:42px;letter-spacing:-2px}
+      .hero-copy{padding:38px 22px 18px}.hero-photo{min-height:330px;padding:20px 22px 0}.hero-photo img{max-height:320px}
+      section{padding:42px 0}.quick-grid,.checklist,.type-grid{grid-template-columns:1fr}
+      .choose,.cta,.seo-text{padding:27px}.section-head{display:block}.section-head p{margin-top:12px}
+      .footer-grid{display:block}.footer-links{margin-top:17px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="../">Работа<span>НСК</span></a>
+    <nav>
+      <a href="#professions">Направления</a>
+      <a href="#faq">Вопросы</a>
+      <a href="../gruzchik/">Грузчик</a>
+      <a href="../#vacancies">Все вакансии</a>
+    </nav>
+    <a class="header-btn" href="../#apply">Подобрать работу</a>
+  </div>
+</header>
+
+<div class="container breadcrumbs">
+  <a href="../">Работа в Новосибирске</a> → Работа на складе
+</div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <div class="hero-copy">
+          <span class="eyebrow">🏬 Складские вакансии в Новосибирске</span>
+          <h1>Работа на складе в Новосибирске</h1>
+          <p>Кладовщик, сборщик заказов, комплектовщик, упаковщик и грузчик. Сравните складские направления по задачам, графику, району и требованиям.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="../#apply">Подобрать вариант</a>
+            <a class="btn btn-white" href="#professions">Смотреть направления</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="../assets/sklad-page.webp" alt="Сотрудник склада с коробкой в Новосибирске" width="470" height="475">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Что важно в складской вакансии</h2>
+        <p>Слово «склад» объединяет разные профессии. Условия и нагрузка могут сильно отличаться даже внутри одного объекта.</p>
+      </div>
+      <div class="quick-grid">
+        <article class="quick"><div class="icon">📋</div><strong>Обязанности</strong><p>Приёмка, сборка заказов, упаковка, перемещение или учёт товара — заранее уточните основную задачу.</p></article>
+        <article class="quick"><div class="icon">🕒</div><strong>Смены</strong><p>Дневные, вечерние и другие графики зависят от конкретного работодателя и объекта.</p></article>
+        <article class="quick"><div class="icon">📍</div><strong>Район</strong><p>Для сменной работы особенно важно оценить дорогу до склада и возможность добраться после смены.</p></article>
+        <article class="quick"><div class="icon">🏋️</div><strong>Нагрузка</strong><p>Уточните вес товара, темп работы и наличие техники для перемещения грузов.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="professions">
+    <div class="container">
+      <div class="section-head">
+        <h2>Кем можно работать на складе</h2>
+        <p>Это разные поисковые направления, поэтому часть из них дальше получит собственные полноценные страницы.</p>
+      </div>
+      <div class="type-grid">
+        <article class="type-card">
+          <div class="type-icon">📦</div>
+          <h3>Сборщик заказов</h3>
+          <p>Сбор товаров по заданию, проверка позиций и подготовка заказа к следующему этапу.</p>
+          <div class="tag-row"><span class="tag">заказы</span><span class="tag">сборка</span></div>
+        </article>
+        <article class="type-card">
+          <div class="type-icon">📋</div>
+          <h3>Кладовщик</h3>
+          <p>Приёмка, размещение, учёт и выдача товара. Обязанности зависят от конкретного склада.</p>
+          <div class="tag-row"><span class="tag">учёт</span><span class="tag">приёмка</span></div>
+        </article>
+        <article class="type-card">
+          <div class="type-icon">🎁</div>
+          <h3>Упаковщик</h3>
+          <p>Упаковка товара или заказов, маркировка и подготовка к отправке или размещению.</p>
+          <div class="tag-row"><span class="tag">упаковка</span><span class="tag">маркировка</span></div>
+        </article>
+        <article class="type-card">
+          <div class="type-icon">💪</div>
+          <h3>Грузчик</h3>
+          <p>Разгрузка, перемещение товара и помощь при складских операциях.</p>
+          <div class="tag-row"><span class="tag">разгрузка</span><span class="tag">склад</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container choose">
+      <div class="choose-grid">
+        <div>
+          <h2>Один склад — разные условия работы</h2>
+          <p>Перед откликом полезно сравнить не только название вакансии и сумму в объявлении, но и реальный режим работы.</p>
+        </div>
+        <div class="checklist">
+          <div class="check"><b>01 · График</b>Продолжительность смены и дни выхода.</div>
+          <div class="check"><b>02 · Задачи</b>Что занимает основную часть рабочего времени.</div>
+          <div class="check"><b>03 · Условия</b>Температура помещения, спецодежда и техника.</div>
+          <div class="check"><b>04 · Выплаты</b>Как рассчитывается оплата и когда она перечисляется.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container seo-text">
+      <h2>Вакансии на складе в Новосибирске</h2>
+      <p>Работа на складе — широкое направление, которое включает несколько разных профессий. В Новосибирске такие вакансии могут быть связаны с магазинами, распределительными центрами, логистикой и онлайн-заказами.</p>
+      <p>На РаботаНСК мы разделяем складские предложения по типу задач, чтобы человеку было проще понять разницу между кладовщиком, сборщиком заказов, упаковщиком и грузчиком.</p>
+
+      <h3>Работа на складе без опыта</h3>
+      <p>У части работодателей могут встречаться позиции, где предыдущий опыт не является обязательным. Но мы не распространяем это условие на все складские вакансии — требования нужно смотреть по конкретному предложению.</p>
+
+      <h3>Подработка на складе</h3>
+      <p>Если полная занятость не подходит, можно искать отдельные смены или варианты с подходящим графиком. Наличие такой работы зависит от текущих потребностей работодателей.</p>
+
+      <h3>Как выбрать склад</h3>
+      <ul>
+        <li>сравнить адрес и время в пути;</li>
+        <li>уточнить график и продолжительность смен;</li>
+        <li>понять, какие физические нагрузки предусмотрены;</li>
+        <li>проверить требования к опыту и документам;</li>
+        <li>уточнить порядок оформления и выплат.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Связанные направления</h2>
+        <p>Переходите к более узкой профессии, если уже знаете, что именно хотите делать.</p>
+      </div>
+      <div class="links-grid">
+        <a class="link-card" href="../gruzchik/"><b>💪 Работа грузчиком</b><span>Складские и торговые объекты</span></a>
+        <a class="link-card" href="../#vacancies"><b>📦 Сборщик заказов</b><span>Сбор и комплектация заказов</span></a>
+        <a class="link-card" href="../#vacancies"><b>📋 Кладовщик</b><span>Приёмка, размещение и учёт товара</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Частые вопросы</h2>
+        <p>Основные моменты, которые стоит уточнить перед откликом на складскую вакансию.</p>
+      </div>
+      <div class="faq">
+        <details><summary>Можно ли устроиться на склад без опыта?</summary><p>В некоторых вакансиях опыт может не требоваться. Точные требования определяет конкретный работодатель.</p></details>
+        <details><summary>Какие профессии относятся к работе на складе?</summary><p>Например, кладовщик, сборщик заказов, комплектовщик, упаковщик и грузчик. Набор обязанностей зависит от объекта.</p></details>
+        <details><summary>Есть ли подработка на складе?</summary><p>Такие варианты могут встречаться, включая отдельные смены. Актуальный график нужно смотреть в конкретной вакансии.</p></details>
+        <details><summary>Работа на складе всегда физически тяжёлая?</summary><p>Нет. Нагрузка сильно отличается по профессиям и объектам. Упаковщик, кладовщик и грузчик могут выполнять совершенно разные задачи.</p></details>
+        <details><summary>РаботаНСК является работодателем?</summary><p>Нет. РаботаНСК — независимый сервис подбора и сравнения вакансий. Окончательные условия определяет конкретный работодатель.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container cta">
+      <div>
+        <h2>Подберём работу на складе</h2>
+        <p>Укажите в анкете интересующее направление, компанию и удобный формат. Пока форма находится на этапе технической подготовки и реальные заявки не отправляются.</p>
+      </div>
+      <a class="btn btn-dark" href="../#apply">Перейти к анкете</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      © 2026 РаботаНСК · независимый сервис подбора вакансий<br>
+      Оператор: ООО «Работа» · ИНН 7720488793 · ОГРН 1197746711821<br>
+      Названия и товарные знаки компаний принадлежат их владельцам.
+    </div>
+    <div class="footer-links">
+      <a href="../privacy.html">Политика обработки ПД</a>
+      <a href="../consent.html">Согласие на обработку ПД</a>
+      <a href="../terms.html">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
