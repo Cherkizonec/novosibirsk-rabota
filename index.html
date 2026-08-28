@@ -5,10 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Работа и подработка в Новосибирске — вакансии без опыта</title>
-    <meta name="description"
-          content="Работа и подработка в Новосибирске. Выберите подходящую вакансию, удобный график и район. Есть варианты без опыта.">
+    <meta name="description" content="Работа и подработка в Новосибирске. Выберите подходящую вакансию, график и район. Есть варианты без опыта и с гибкой занятостью.">
+
+    <meta name="theme-color" content="#20c866">
 
     <style>
+        :root {
+            --green: #20c866;
+            --green-dark: #13a952;
+            --lime: #dfffbb;
+            --lime-2: #c9f58f;
+            --black: #161616;
+            --text: #1d1d1f;
+            --muted: #70757d;
+            --bg: #f5f6f7;
+            --card: #ffffff;
+            --line: #e8eaed;
+            --blue: #e2f4ff;
+            --orange: #fff0d8;
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -20,8 +36,12 @@
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #f5f6f7;
-            color: #151515;
+            background: var(--bg);
+            color: var(--text);
+        }
+
+        button, input, select {
+            font: inherit;
         }
 
         a {
@@ -33,75 +53,89 @@
             margin: 0 auto;
         }
 
+        /* HEADER */
+
         header {
-            background: rgba(255,255,255,.96);
-            border-bottom: 1px solid #ececec;
             position: sticky;
             top: 0;
             z-index: 100;
+            background: rgba(255,255,255,.94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(0,0,0,.06);
         }
 
         .header-inner {
-            min-height: 74px;
+            min-height: 76px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 30px;
+            gap: 24px;
         }
 
         .logo {
-            font-size: 23px;
+            font-size: 24px;
             font-weight: 900;
-            letter-spacing: -.5px;
+            letter-spacing: -1px;
+            white-space: nowrap;
         }
 
         .logo span {
-            color: #16b957;
+            color: var(--green);
         }
 
         nav {
             display: flex;
-            gap: 28px;
+            align-items: center;
+            gap: 26px;
         }
 
         nav a {
             text-decoration: none;
-            font-size: 15px;
-            font-weight: 600;
             color: #444;
+            font-size: 14px;
+            font-weight: 700;
         }
 
         nav a:hover {
-            color: #16b957;
+            color: var(--green-dark);
         }
 
         .header-btn {
             text-decoration: none;
-            background: #16c55f;
+            background: var(--green);
+            color: #fff;
             padding: 14px 21px;
-            color: white;
-            border-radius: 13px;
+            border-radius: 14px;
             font-weight: 800;
+            transition: .2s;
+            white-space: nowrap;
         }
 
+        .header-btn:hover {
+            transform: translateY(-1px);
+            background: var(--green-dark);
+        }
+
+        /* HERO */
+
         .hero {
-            padding: 34px 0 20px;
+            padding: 30px 0 18px;
         }
 
         .hero-box {
-            min-height: 590px;
-            border-radius: 34px;
-            background:
-                radial-gradient(circle at 75% 20%, rgba(255,255,255,.4), transparent 30%),
-                linear-gradient(135deg, #bdf269, #85e85c);
-            overflow: hidden;
+            min-height: 610px;
             display: grid;
             grid-template-columns: 1.05fr .95fr;
+            overflow: hidden;
             position: relative;
+            border-radius: 36px;
+            background:
+                radial-gradient(circle at 82% 15%, rgba(255,255,255,.7), transparent 23%),
+                linear-gradient(135deg, #dfffba 0%, #aaf16e 55%, #7cdd78 100%);
         }
 
         .hero-left {
-            padding: 64px;
+            padding: 66px 20px 64px 64px;
             position: relative;
             z-index: 2;
         }
@@ -111,143 +145,175 @@
             align-items: center;
             gap: 8px;
             padding: 9px 14px;
-            background: rgba(255,255,255,.88);
             border-radius: 100px;
+            background: rgba(255,255,255,.88);
             font-size: 14px;
             font-weight: 800;
             margin-bottom: 24px;
         }
 
-        .hero h1 {
-            font-size: 64px;
+        h1 {
+            font-size: clamp(48px, 5.2vw, 68px);
             line-height: .98;
-            letter-spacing: -3px;
-            margin: 0 0 25px;
-            max-width: 700px;
+            letter-spacing: -3.4px;
+            margin: 0 0 24px;
+            max-width: 690px;
         }
 
         .hero-subtitle {
+            max-width: 590px;
+            margin: 0 0 28px;
+            color: #39453a;
             font-size: 20px;
             line-height: 1.55;
-            max-width: 580px;
-            color: #31412f;
-            margin: 0 0 28px;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 12px;
             flex-wrap: wrap;
+            gap: 12px;
         }
 
         .btn-main,
         .btn-light {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 24px;
+            border-radius: 15px;
             text-decoration: none;
-            padding: 17px 25px;
-            border-radius: 14px;
-            font-size: 16px;
             font-weight: 800;
+            transition: .2s;
         }
 
         .btn-main {
-            background: #151515;
-            color: white;
+            background: var(--black);
+            color: #fff;
+        }
+
+        .btn-main:hover {
+            transform: translateY(-2px);
         }
 
         .btn-light {
-            background: rgba(255,255,255,.75);
-            color: #151515;
+            background: rgba(255,255,255,.78);
+            color: var(--black);
+        }
+
+        .hero-trust {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 28px;
+        }
+
+        .trust-chip {
+            background: rgba(255,255,255,.68);
+            border: 1px solid rgba(255,255,255,.45);
+            padding: 10px 13px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 800;
         }
 
         .hero-right {
             position: relative;
-            min-height: 590px;
+            min-height: 610px;
         }
 
-        .person-circle {
+        .hero-orb {
+            width: 490px;
+            height: 490px;
             position: absolute;
-            width: 430px;
-            height: 430px;
+            right: -20px;
+            bottom: -60px;
             border-radius: 50%;
             background: rgba(255,255,255,.34);
-            right: 15px;
-            bottom: -55px;
         }
 
-        .person {
+        .worker-wrap {
             position: absolute;
-            bottom: 30px;
-            right: 80px;
-            font-size: 260px;
-            filter: drop-shadow(0 25px 25px rgba(0,0,0,.12));
+            right: 36px;
+            bottom: 0;
+            width: 470px;
+            height: 540px;
+            display: flex;
+            align-items: end;
+            justify-content: center;
         }
 
-        .income-card {
+        .worker-svg {
+            width: 100%;
+            height: auto;
+            filter: drop-shadow(0 24px 30px rgba(0,0,0,.12));
+        }
+
+        .float-card {
             position: absolute;
-            top: 80px;
-            right: 45px;
-            background: white;
-            padding: 18px 22px;
+            z-index: 3;
+            background: #fff;
             border-radius: 20px;
-            box-shadow: 0 20px 50px rgba(0,0,0,.12);
+            box-shadow: 0 20px 60px rgba(0,0,0,.13);
+            padding: 17px 20px;
         }
 
-        .income-card small {
+        .float-card small {
             display: block;
             color: #777;
             margin-bottom: 5px;
+            font-size: 12px;
         }
 
-        .income-card strong {
-            font-size: 27px;
+        .float-card strong {
+            font-size: 18px;
         }
 
-        .schedule-card {
-            position: absolute;
-            left: 15px;
+        .float-card.top {
+            top: 78px;
+            right: 42px;
+        }
+
+        .float-card.bottom {
+            left: 5px;
             bottom: 80px;
-            background: #151515;
-            color: white;
-            padding: 16px 20px;
-            border-radius: 18px;
-            box-shadow: 0 20px 50px rgba(0,0,0,.15);
+            background: var(--black);
+            color: #fff;
         }
 
-        .schedule-card strong {
-            display: block;
-            margin-bottom: 5px;
+        .float-card.bottom small {
+            color: #aaa;
         }
 
-        .schedule-card span {
-            color: #cbcbcb;
-            font-size: 14px;
-        }
+        /* COMMON */
 
         section {
-            padding: 65px 0;
+            padding: 64px 0;
         }
 
         .section-head {
             display: flex;
-            align-items: end;
             justify-content: space-between;
+            align-items: end;
             gap: 30px;
             margin-bottom: 32px;
         }
 
         .section-title {
-            font-size: 42px;
-            letter-spacing: -1.5px;
             margin: 0;
+            font-size: 42px;
+            line-height: 1.05;
+            letter-spacing: -1.7px;
         }
 
         .section-description {
-            max-width: 460px;
-            color: #70757d;
-            line-height: 1.55;
             margin: 0;
+            max-width: 480px;
+            color: var(--muted);
+            line-height: 1.6;
         }
+
+        /* CATEGORIES */
 
         .categories {
             display: grid;
@@ -256,67 +322,81 @@
         }
 
         .category {
-            background: white;
-            padding: 28px;
-            min-height: 230px;
-            border-radius: 24px;
-            text-decoration: none;
             position: relative;
+            min-height: 240px;
+            padding: 28px;
+            border-radius: 26px;
+            background: var(--card);
+            text-decoration: none;
             transition: .2s;
+            border: 1px solid rgba(0,0,0,.03);
         }
 
         .category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 45px rgba(0,0,0,.08);
+            box-shadow: 0 18px 50px rgba(0,0,0,.08);
+        }
+
+        .category:nth-child(2) {
+            background: var(--blue);
+        }
+
+        .category:nth-child(3) {
+            background: var(--orange);
+        }
+
+        .category:nth-child(4) {
+            background: #eafbd9;
         }
 
         .category-icon {
-            width: 55px;
-            height: 55px;
-            border-radius: 17px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 27px;
-            background: #e9ffd2;
-            margin-bottom: 35px;
+            width: 58px;
+            height: 58px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 34px;
+            border-radius: 18px;
+            background: rgba(255,255,255,.75);
+            font-size: 28px;
         }
 
         .category h3 {
+            margin: 0 0 9px;
             font-size: 23px;
-            margin: 0 0 10px;
         }
 
         .category p {
-            color: #777;
-            line-height: 1.5;
             margin: 0;
+            max-width: 220px;
+            color: #6f7379;
+            line-height: 1.5;
         }
 
         .category-arrow {
             position: absolute;
-            right: 25px;
+            right: 24px;
             bottom: 22px;
-            font-size: 23px;
+            font-size: 22px;
+            font-weight: 900;
         }
 
         /* CALCULATOR */
 
         .salary-calculator {
-            background: #e8ffd4;
-            border-radius: 32px;
-            padding: 52px;
+            background: #e5ffd0;
+            border-radius: 34px;
+            padding: 54px;
             display: grid;
-            grid-template-columns: 1fr .85fr;
-            gap: 55px;
-            align-items: center;
+            grid-template-columns: 1fr .9fr;
+            gap: 56px;
+            align-items: stretch;
         }
 
         .calc-kicker {
             display: inline-block;
-            background: #171717;
-            color: white;
             padding: 8px 13px;
+            background: var(--black);
+            color: #fff;
             border-radius: 100px;
             font-size: 12px;
             font-weight: 900;
@@ -324,59 +404,87 @@
         }
 
         .calc-left h2 {
-            font-size: 44px;
-            letter-spacing: -1.5px;
             margin: 0 0 14px;
+            font-size: 44px;
+            letter-spacing: -1.6px;
         }
 
         .calc-left > p {
-            color: #5d6757;
+            max-width: 530px;
+            margin: 0 0 34px;
+            color: #61705a;
             font-size: 17px;
             line-height: 1.55;
-            margin: 0 0 38px;
-            max-width: 520px;
+        }
+
+        .calc-select-wrap {
+            margin-bottom: 28px;
+        }
+
+        .calc-select-wrap label,
+        .calc-label span:first-child {
+            font-weight: 700;
+        }
+
+        .calc-select-wrap label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .calc-select {
+            width: 100%;
+            min-height: 52px;
+            border: 0;
+            border-radius: 15px;
+            padding: 0 16px;
+            background: rgba(255,255,255,.84);
+            color: var(--text);
+            outline: none;
+            font-weight: 700;
         }
 
         .calc-control {
-            margin-top: 30px;
+            margin-top: 26px;
         }
 
         .calc-label {
             display: flex;
             justify-content: space-between;
             gap: 20px;
-            margin-bottom: 14px;
-            font-size: 17px;
+            margin-bottom: 13px;
         }
 
         .calc-label strong {
             font-size: 18px;
         }
 
-        .calc-control input[type="range"] {
+        input[type="range"] {
             width: 100%;
-            accent-color: #171717;
+            accent-color: var(--black);
             cursor: pointer;
         }
 
         .calc-result {
-            background: white;
-            border-radius: 28px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #fff;
+            border-radius: 29px;
             padding: 38px;
         }
 
         .calc-result-label {
-            color: #747474;
-            font-size: 15px;
+            color: #777;
+            font-size: 14px;
             margin-bottom: 10px;
         }
 
         .calc-amount {
-            font-size: 52px;
+            font-size: 50px;
             line-height: 1;
+            letter-spacing: -2.2px;
             font-weight: 900;
-            letter-spacing: -2px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .calc-small-grid {
@@ -386,57 +494,113 @@
         }
 
         .calc-small-grid div {
-            background: #f5f6f7;
-            border-radius: 17px;
             padding: 18px;
+            border-radius: 17px;
+            background: var(--bg);
         }
 
         .calc-small-grid span {
             display: block;
             color: #777;
-            font-size: 13px;
-            margin-bottom: 7px;
+            font-size: 12px;
+            margin-bottom: 6px;
         }
 
         .calc-small-grid strong {
-            font-size: 19px;
+            font-size: 18px;
         }
 
         .calc-note {
+            margin-top: 20px;
             color: #8a8a8a;
             font-size: 12px;
             line-height: 1.45;
-            margin-top: 22px;
         }
 
+        /* VACANCIES */
+
+        .vacancy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .vacancy-card {
+            background: #fff;
+            border-radius: 26px;
+            padding: 28px;
+            border: 1px solid rgba(0,0,0,.03);
+        }
+
+        .vacancy-badge {
+            display: inline-block;
+            background: #ebfbdc;
+            color: #238542;
+            padding: 7px 10px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 900;
+            margin-bottom: 18px;
+        }
+
+        .vacancy-card h3 {
+            font-size: 26px;
+            line-height: 1.1;
+            margin: 0 0 16px;
+        }
+
+        .vacancy-list {
+            list-style: none;
+            margin: 0 0 24px;
+            padding: 0;
+            color: #61666c;
+            line-height: 1.85;
+        }
+
+        .vacancy-link {
+            text-decoration: none;
+            font-weight: 900;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .vacancy-link:hover {
+            color: var(--green-dark);
+        }
+
+        /* FEATURE */
+
         .feature {
-            background: #171717;
-            color: white;
-            border-radius: 32px;
-            padding: 50px;
             display: grid;
             grid-template-columns: 1.1fr .9fr;
-            gap: 50px;
+            gap: 48px;
+            padding: 50px;
+            border-radius: 34px;
+            background: var(--black);
+            color: #fff;
         }
 
         .feature-tag {
             display: inline-block;
-            color: #101010;
-            background: #a6ed64;
+            margin-bottom: 20px;
             padding: 8px 13px;
             border-radius: 100px;
-            font-size: 13px;
-            font-weight: 800;
-            margin-bottom: 20px;
+            background: #a8ef67;
+            color: #111;
+            font-size: 12px;
+            font-weight: 900;
         }
 
         .feature h2 {
+            margin: 0 0 18px;
             font-size: 44px;
-            margin: 0 0 20px;
+            letter-spacing: -1.6px;
         }
 
         .feature-text {
-            color: #c3c3c3;
+            max-width: 570px;
+            color: #c5c5c5;
             font-size: 18px;
             line-height: 1.55;
         }
@@ -444,12 +608,12 @@
         .feature-info {
             background: #252525;
             border-radius: 24px;
-            padding: 30px;
+            padding: 28px;
         }
 
         .feature-row {
-            padding: 17px 0;
-            border-bottom: 1px solid #3b3b3b;
+            padding: 16px 0;
+            border-bottom: 1px solid #3d3d3d;
         }
 
         .feature-row:last-child {
@@ -458,24 +622,27 @@
 
         .feature-row small {
             display: block;
-            color: #909090;
+            color: #929292;
             margin-bottom: 6px;
         }
 
         .feature-row strong {
-            font-size: 19px;
+            font-size: 18px;
         }
+
+        /* ADVANTAGES */
 
         .advantages {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 17px;
+            gap: 16px;
         }
 
         .advantage {
+            min-height: 210px;
+            padding: 28px;
             border-radius: 25px;
-            padding: 30px;
-            background: white;
+            background: #fff;
         }
 
         .advantage:nth-child(2) {
@@ -483,48 +650,50 @@
         }
 
         .advantage:nth-child(5) {
-            background: #dff4ff;
+            background: var(--blue);
         }
 
         .advantage-icon {
-            font-size: 34px;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
+            font-size: 33px;
         }
 
         .advantage h3 {
+            margin: 0 0 9px;
             font-size: 22px;
-            margin: 0 0 10px;
         }
 
         .advantage p {
+            margin: 0;
             color: #747474;
             line-height: 1.5;
-            margin: 0;
         }
 
+        /* STEPS */
+
         .steps-box {
-            background: white;
-            border-radius: 30px;
             padding: 50px;
+            border-radius: 31px;
+            background: #fff;
         }
 
         .steps {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
-            margin-top: 38px;
+            margin-top: 36px;
         }
 
         .step-number {
             font-size: 48px;
             font-weight: 900;
-            color: #b5ec78;
-            margin-bottom: 20px;
+            color: #b6ed7a;
+            margin-bottom: 18px;
         }
 
         .step h3 {
+            margin: 0 0 9px;
             font-size: 20px;
-            margin: 0 0 10px;
         }
 
         .step p {
@@ -533,21 +702,123 @@
             line-height: 1.5;
         }
 
+        /* FORM */
+
+        .apply-box {
+            display: grid;
+            grid-template-columns: .9fr 1.1fr;
+            gap: 42px;
+            border-radius: 34px;
+            background: #151515;
+            color: #fff;
+            padding: 54px;
+        }
+
+        .apply-copy h2 {
+            font-size: 44px;
+            letter-spacing: -1.6px;
+            margin: 0 0 16px;
+        }
+
+        .apply-copy p {
+            color: #c0c0c0;
+            line-height: 1.55;
+            margin: 0 0 22px;
+            max-width: 480px;
+        }
+
+        .apply-note {
+            color: #8b8b8b;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        .apply-form {
+            background: #fff;
+            color: var(--text);
+            border-radius: 26px;
+            padding: 28px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+        }
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        .field label {
+            font-size: 13px;
+            font-weight: 800;
+            color: #555;
+        }
+
+        .field input,
+        .field select {
+            width: 100%;
+            min-height: 50px;
+            border: 1px solid #dedede;
+            border-radius: 14px;
+            padding: 0 14px;
+            outline: none;
+            background: #fff;
+        }
+
+        .field input:focus,
+        .field select:focus {
+            border-color: var(--green);
+            box-shadow: 0 0 0 3px rgba(32,200,102,.12);
+        }
+
+        .submit-btn {
+            width: 100%;
+            min-height: 52px;
+            border: 0;
+            border-radius: 14px;
+            background: var(--green);
+            color: #fff;
+            font-weight: 900;
+            cursor: pointer;
+            margin-top: 14px;
+        }
+
+        .submit-btn:hover {
+            background: var(--green-dark);
+        }
+
+        .form-status {
+            min-height: 20px;
+            margin-top: 12px;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        /* FAQ */
+
         .faq {
             display: grid;
             gap: 12px;
         }
 
         details {
-            background: white;
-            border-radius: 18px;
             padding: 22px 25px;
+            border-radius: 18px;
+            background: #fff;
         }
 
         summary {
             cursor: pointer;
-            font-weight: 800;
             font-size: 18px;
+            font-weight: 800;
         }
 
         details p {
@@ -555,61 +826,70 @@
             line-height: 1.55;
         }
 
+        /* FINAL */
+
         .final-box {
-            background: #a8ef67;
-            border-radius: 32px;
-            text-align: center;
             padding: 65px 30px;
+            border-radius: 34px;
+            background: #a8ef67;
+            text-align: center;
         }
 
         .final-box h2 {
-            font-size: 46px;
-            margin: 0 0 15px;
+            margin: 0 0 14px;
+            font-size: 45px;
+            letter-spacing: -1.5px;
         }
 
         .final-box p {
-            font-size: 18px;
+            margin: 0 0 24px;
             color: #405335;
-            margin-bottom: 27px;
+            font-size: 18px;
         }
 
         footer {
-            padding: 30px 0 45px;
+            padding: 32px 0 45px;
             color: #777;
-            font-size: 14px;
+            font-size: 13px;
         }
 
-        @media (max-width: 900px) {
+        .footer-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 980px) {
             nav {
                 display: none;
             }
 
-            .hero-box {
+            .hero-box,
+            .salary-calculator,
+            .feature,
+            .apply-box {
                 grid-template-columns: 1fr;
             }
 
             .hero-right {
-                min-height: 390px;
+                min-height: 420px;
             }
 
-            .hero h1 {
-                font-size: 52px;
+            .worker-wrap {
+                right: 50%;
+                transform: translateX(50%);
             }
 
             .categories {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .salary-calculator {
-                grid-template-columns: 1fr;
-            }
-
+            .vacancy-grid,
             .advantages {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .feature {
-                grid-template-columns: 1fr;
             }
 
             .steps {
@@ -617,9 +897,17 @@
             }
         }
 
-        @media (max-width: 580px) {
+        @media (max-width: 640px) {
             .container {
                 width: calc(100% - 24px);
+            }
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .logo {
+                font-size: 21px;
             }
 
             .header-btn {
@@ -628,20 +916,20 @@
             }
 
             .hero {
-                padding-top: 15px;
+                padding-top: 14px;
             }
 
             .hero-box {
-                border-radius: 25px;
+                border-radius: 26px;
             }
 
             .hero-left {
-                padding: 35px 24px;
+                padding: 35px 23px 18px;
             }
 
-            .hero h1 {
-                font-size: 42px;
-                letter-spacing: -2px;
+            h1 {
+                font-size: 43px;
+                letter-spacing: -2.1px;
             }
 
             .hero-subtitle {
@@ -649,31 +937,31 @@
             }
 
             .hero-right {
-                min-height: 300px;
+                min-height: 330px;
             }
 
-            .person {
-                font-size: 190px;
-                right: 35px;
+            .worker-wrap {
+                width: 330px;
+                height: 360px;
             }
 
-            .person-circle {
-                width: 300px;
-                height: 300px;
+            .hero-orb {
+                width: 320px;
+                height: 320px;
             }
 
-            .income-card {
-                top: 15px;
-                right: 15px;
+            .float-card.top {
+                top: 18px;
+                right: 12px;
             }
 
-            .schedule-card {
-                left: 15px;
-                bottom: 25px;
+            .float-card.bottom {
+                left: 12px;
+                bottom: 22px;
             }
 
             section {
-                padding: 45px 0;
+                padding: 44px 0;
             }
 
             .section-head {
@@ -686,22 +974,28 @@
             }
 
             .categories,
+            .vacancy-grid,
             .advantages,
             .steps {
                 grid-template-columns: 1fr;
             }
 
-            .salary-calculator {
-                padding: 30px 24px;
-                gap: 30px;
+            .salary-calculator,
+            .feature,
+            .steps-box,
+            .apply-box {
+                padding: 30px 23px;
             }
 
-            .calc-left h2 {
+            .calc-left h2,
+            .feature h2,
+            .apply-copy h2,
+            .final-box h2 {
                 font-size: 35px;
             }
 
             .calc-result {
-                padding: 26px;
+                padding: 25px;
             }
 
             .calc-amount {
@@ -712,20 +1006,12 @@
                 grid-template-columns: 1fr;
             }
 
-            .feature {
-                padding: 30px 24px;
+            .form-grid {
+                grid-template-columns: 1fr;
             }
 
-            .feature h2 {
-                font-size: 35px;
-            }
-
-            .steps-box {
-                padding: 30px 24px;
-            }
-
-            .final-box h2 {
-                font-size: 35px;
+            .field.full {
+                grid-column: auto;
             }
         }
     </style>
@@ -745,7 +1031,7 @@
             <a href="#faq">Вопросы</a>
         </nav>
 
-        <a href="#vacancies" class="header-btn">Найти работу</a>
+        <a class="header-btn" href="#apply">Откликнуться</a>
     </div>
 </header>
 
@@ -761,28 +1047,58 @@
                 <h1>Работа под твой ритм жизни</h1>
 
                 <p class="hero-subtitle">
-                    Выбирай удобный график, подходящий район
-                    и формат занятости. Есть варианты для старта без опыта.
+                    Выбирай удобный график, подходящий район и формат занятости.
+                    Есть варианты для старта без опыта и для подработки.
                 </p>
 
                 <div class="hero-buttons">
                     <a href="#vacancies" class="btn-main">Смотреть вакансии</a>
                     <a href="#calculator" class="btn-light">Рассчитать доход</a>
                 </div>
+
+                <div class="hero-trust">
+                    <div class="trust-chip">✓ Без опыта</div>
+                    <div class="trust-chip">✓ Гибкий график</div>
+                    <div class="trust-chip">✓ Новосибирск</div>
+                </div>
             </div>
 
             <div class="hero-right">
-                <div class="person-circle"></div>
-                <div class="person">🧑‍💼</div>
+                <div class="hero-orb"></div>
 
-                <div class="income-card">
-                    <small>Выбери свой график</small>
-                    <strong>под себя</strong>
+                <div class="worker-wrap">
+                    <svg class="worker-svg" viewBox="0 0 460 520" role="img" aria-label="Иллюстрация сотрудника">
+                        <ellipse cx="232" cy="492" rx="150" ry="18" fill="rgba(0,0,0,.10)"/>
+                        <path d="M143 458c7-80 23-139 52-180h76c33 49 48 108 50 180z" fill="#1b1b1b"/>
+                        <path d="M180 295c12 24 26 37 49 37 24 0 39-13 52-37l-19-30h-62z" fill="#ffd0b0"/>
+                        <circle cx="231" cy="205" r="70" fill="#ffd0b0"/>
+                        <path d="M165 199c1-65 34-95 78-95 42 0 71 25 73 74-33-18-76-20-151 21z" fill="#222"/>
+                        <path d="M163 198c-5-24 0-52 14-73 21-32 55-47 91-36 26 8 47 31 51 67-41-32-108-27-156 42z" fill="#151515"/>
+                        <path d="M173 191c17-12 38-20 62-21 23-2 46 4 68 18" stroke="#0e0e0e" stroke-width="16" stroke-linecap="round"/>
+                        <circle cx="206" cy="209" r="5" fill="#222"/>
+                        <circle cx="258" cy="209" r="5" fill="#222"/>
+                        <path d="M215 241c12 8 24 8 36 0" stroke="#b85e55" stroke-width="5" stroke-linecap="round" fill="none"/>
+                        <path d="M194 284h76l31 44-66 37-70-37z" fill="#20c866"/>
+                        <path d="M190 304l-61 41 25 46 64-47z" fill="#20c866"/>
+                        <path d="M279 304l64 43-29 45-63-48z" fill="#20c866"/>
+                        <path d="M129 345l-32 101 48 15 34-89z" fill="#ffd0b0"/>
+                        <path d="M343 347l26 101-49 12-31-91z" fill="#ffd0b0"/>
+                        <rect x="178" y="323" width="109" height="112" rx="22" fill="#18b95a"/>
+                        <rect x="199" y="345" width="68" height="48" rx="8" fill="#fff" opacity=".95"/>
+                        <path d="M210 369h46" stroke="#20c866" stroke-width="6" stroke-linecap="round"/>
+                        <path d="M203 454l-18 38h50v-38z" fill="#333"/>
+                        <path d="M258 454l3 38h51l-20-38z" fill="#333"/>
+                    </svg>
                 </div>
 
-                <div class="schedule-card">
-                    <strong>Гибкий формат</strong>
-                    <span>Работа и подработка</span>
+                <div class="float-card top">
+                    <small>Формат</small>
+                    <strong>Работа + подработка</strong>
+                </div>
+
+                <div class="float-card bottom">
+                    <small>Можно подобрать</small>
+                    <strong>график под себя</strong>
                 </div>
             </div>
 
@@ -795,43 +1111,41 @@
     <div class="container">
 
         <div class="section-head">
-            <h2 class="section-title">Выбери, что тебе подходит</h2>
+            <h2 class="section-title">Выбери формат работы</h2>
             <p class="section-description">
-                Разные форматы занятости в Новосибирске —
-                от подработки на несколько часов до постоянной работы.
+                Пока это прототип направлений. После изучения поисковых запросов
+                мы оставим только те категории, которые реально ищут в Новосибирске.
             </p>
         </div>
 
         <div class="categories">
-
-            <a class="category" href="#">
+            <a class="category" href="#vacancy-list">
                 <div class="category-icon">🚴</div>
                 <h3>Курьер</h3>
-                <p>Работа и подработка с гибким графиком.</p>
+                <p>Гибкий график и разные форматы занятости.</p>
                 <div class="category-arrow">→</div>
             </a>
 
-            <a class="category" href="#">
+            <a class="category" href="#vacancy-list">
                 <div class="category-icon">📦</div>
                 <h3>Сборщик</h3>
-                <p>Варианты работы в разных районах города.</p>
+                <p>Работа в разных районах Новосибирска.</p>
                 <div class="category-arrow">→</div>
             </a>
 
-            <a class="category" href="#">
+            <a class="category" href="#vacancy-list">
                 <div class="category-icon">⏱️</div>
                 <h3>Подработка</h3>
-                <p>Когда нужна занятость на несколько часов.</p>
+                <p>Варианты занятости на несколько часов.</p>
                 <div class="category-arrow">→</div>
             </a>
 
-            <a class="category" href="#">
+            <a class="category" href="#vacancy-list">
                 <div class="category-icon">🚀</div>
                 <h3>Без опыта</h3>
                 <p>Варианты для тех, кто только начинает.</p>
                 <div class="category-arrow">→</div>
             </a>
-
         </div>
     </div>
 </section>
@@ -843,15 +1157,25 @@
         <div class="salary-calculator">
 
             <div class="calc-left">
-
                 <div class="calc-kicker">КАЛЬКУЛЯТОР ДОХОДА</div>
 
                 <h2>Посчитай свой график</h2>
 
                 <p>
-                    Выбери, сколько часов и дней тебе удобно работать,
-                    а калькулятор покажет ориентировочный доход.
+                    Выбери формат, количество часов и дней.
+                    Пока калькулятор использует учебную модель — реальные ставки
+                    подставим после выбора настоящих вакансий.
                 </p>
+
+                <div class="calc-select-wrap">
+                    <label for="jobType">Формат работы</label>
+
+                    <select id="jobType" class="calc-select">
+                        <option value="courier">Курьер</option>
+                        <option value="picker">Сборщик</option>
+                        <option value="parttime">Подработка</option>
+                    </select>
+                </div>
 
                 <div class="calc-control">
                     <div class="calc-label">
@@ -870,15 +1194,10 @@
 
                     <input type="range" id="days" min="1" max="7" value="5">
                 </div>
-
             </div>
 
             <div class="calc-result">
-
-                <div class="calc-result-label">
-                    Примерный доход в месяц
-                </div>
-
+                <div class="calc-result-label">Примерный доход в месяц</div>
                 <div class="calc-amount" id="monthIncome">—</div>
 
                 <div class="calc-small-grid">
@@ -893,12 +1212,64 @@
                     </div>
                 </div>
 
-                <div class="calc-note">
-                    Сейчас используется учебная ставка 450 ₽/час.
-                    Перед реальным запуском заменим расчёт на настоящие условия вакансий.
+                <div class="calc-note" id="rateNote">
+                    Учебная модель расчёта. Эти суммы не являются обещанием дохода.
                 </div>
-
             </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="vacancy-list">
+    <div class="container">
+
+        <div class="section-head">
+            <h2 class="section-title">Актуальные направления</h2>
+            <p class="section-description">
+                Сейчас карточки демонстрационные. Позже каждая станет отдельной
+                SEO-страницей с реальными условиями и кнопкой отклика.
+            </p>
+        </div>
+
+        <div class="vacancy-grid">
+
+            <article class="vacancy-card">
+                <div class="vacancy-badge">ГИБКИЙ ГРАФИК</div>
+                <h3>Курьер</h3>
+                <ul class="vacancy-list">
+                    <li>📍 Новосибирск</li>
+                    <li>🕒 Разные варианты графика</li>
+                    <li>🎓 Есть варианты без опыта</li>
+                    <li>📱 Быстрый отклик</li>
+                </ul>
+                <a class="vacancy-link" href="#apply">Откликнуться →</a>
+            </article>
+
+            <article class="vacancy-card">
+                <div class="vacancy-badge">БЕЗ ОПЫТА</div>
+                <h3>Сборщик</h3>
+                <ul class="vacancy-list">
+                    <li>📍 Разные районы города</li>
+                    <li>🕒 Сменный формат</li>
+                    <li>🎓 Возможен старт без опыта</li>
+                    <li>📱 Простая анкета</li>
+                </ul>
+                <a class="vacancy-link" href="#apply">Откликнуться →</a>
+            </article>
+
+            <article class="vacancy-card">
+                <div class="vacancy-badge">ПОДРАБОТКА</div>
+                <h3>На несколько часов</h3>
+                <ul class="vacancy-list">
+                    <li>📍 Новосибирск</li>
+                    <li>⏱️ Частичная занятость</li>
+                    <li>🔄 Можно совмещать</li>
+                    <li>📱 Быстрый отклик</li>
+                </ul>
+                <a class="vacancy-link" href="#apply">Откликнуться →</a>
+            </article>
 
         </div>
     </div>
@@ -909,20 +1280,19 @@
     <div class="container">
 
         <div class="feature">
-
             <div>
                 <div class="feature-tag">ВАКАНСИЯ ДНЯ</div>
 
                 <h2>Работа со свободным графиком</h2>
 
                 <p class="feature-text">
-                    Вариант для тех, кому важно совмещать работу
-                    с учёбой, основной занятостью или личными делами.
+                    Для тех, кому важно совмещать работу с учёбой,
+                    основной занятостью или личными делами.
+                    Конкретные условия появятся после подключения реальных вакансий.
                 </p>
 
-                <a href="#" class="btn-main"
-                   style="background:#a6ed64;color:#111;margin-top:15px;">
-                    Посмотреть условия
+                <a href="#apply" class="btn-main" style="background:#a6ed64;color:#111;margin-top:14px;">
+                    Оставить заявку
                 </a>
             </div>
 
@@ -934,12 +1304,12 @@
 
                 <div class="feature-row">
                     <small>График</small>
-                    <strong>Есть гибкие варианты</strong>
+                    <strong>Гибкие варианты</strong>
                 </div>
 
                 <div class="feature-row">
                     <small>Опыт</small>
-                    <strong>Есть вакансии без опыта</strong>
+                    <strong>Есть варианты без опыта</strong>
                 </div>
 
                 <div class="feature-row">
@@ -947,8 +1317,8 @@
                     <strong>Работа / подработка</strong>
                 </div>
             </div>
-
         </div>
+
     </div>
 </section>
 
@@ -956,46 +1326,44 @@
 <section id="advantages">
     <div class="container">
 
-        <h2 class="section-title" style="margin-bottom:32px;">
-            Почему удобно
-        </h2>
+        <h2 class="section-title" style="margin-bottom:32px;">Почему удобно</h2>
 
         <div class="advantages">
 
             <div class="advantage">
                 <div class="advantage-icon">🕒</div>
                 <h3>Разный график</h3>
-                <p>Ищи работу под своё расписание.</p>
+                <p>Ищи работу под своё расписание и формат занятости.</p>
             </div>
 
             <div class="advantage">
                 <div class="advantage-icon">📍</div>
                 <h3>Разные районы</h3>
-                <p>Можно выбирать варианты ближе к себе.</p>
+                <p>Сравнивай варианты и выбирай то, что удобнее по расположению.</p>
             </div>
 
             <div class="advantage">
                 <div class="advantage-icon">🎓</div>
                 <h3>Без опыта</h3>
-                <p>Есть предложения для начинающих.</p>
+                <p>Отдельно соберём предложения для начинающих.</p>
             </div>
 
             <div class="advantage">
                 <div class="advantage-icon">📱</div>
                 <h3>Простой отклик</h3>
-                <p>Не нужно заполнять длинную анкету.</p>
+                <p>Минимум шагов от просмотра вакансии до заявки.</p>
             </div>
 
             <div class="advantage">
                 <div class="advantage-icon">⚡</div>
                 <h3>Быстрый старт</h3>
-                <p>Выбирай вакансию и узнавай условия.</p>
+                <p>Условия вакансии понятны ещё до отправки отклика.</p>
             </div>
 
             <div class="advantage">
                 <div class="advantage-icon">🔎</div>
-                <h3>Выбор вакансий</h3>
-                <p>Сравнивай разные варианты занятости.</p>
+                <h3>Сравнение вариантов</h3>
+                <p>График, формат, район и требования — в одном месте.</p>
             </div>
 
         </div>
@@ -1007,27 +1375,26 @@
     <div class="container">
 
         <div class="steps-box">
-
             <h2 class="section-title">Начать просто</h2>
 
             <div class="steps">
 
                 <div class="step">
                     <div class="step-number">01</div>
-                    <h3>Выбери вакансию</h3>
-                    <p>Посмотри доступные варианты.</p>
+                    <h3>Выбери направление</h3>
+                    <p>Курьер, сборщик или другой формат.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">02</div>
                     <h3>Изучи условия</h3>
-                    <p>График, район и формат работы.</p>
+                    <p>График, район, требования и формат работы.</p>
                 </div>
 
                 <div class="step">
                     <div class="step-number">03</div>
                     <h3>Оставь заявку</h3>
-                    <p>Укажи основные данные для связи.</p>
+                    <p>Заполни короткую форму для связи.</p>
                 </div>
 
                 <div class="step">
@@ -1037,8 +1404,66 @@
                 </div>
 
             </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section id="apply">
+    <div class="container">
+
+        <div class="apply-box">
+
+            <div class="apply-copy">
+                <div class="calc-kicker" style="background:#a8ef67;color:#111;">ОТКЛИК</div>
+
+                <h2>Оставь заявку за минуту</h2>
+
+                <p>
+                    Мы сделали форму уже сейчас, чтобы проверить интерфейс.
+                    Следующим этапом подключим её к реальному каналу:
+                    Telegram, CRM или другому способу обработки заявок.
+                </p>
+
+                <div class="apply-note">
+                    Сейчас форма тестовая и никуда не отправляет персональные данные.
+                </div>
+            </div>
+
+            <form class="apply-form" id="applyForm" novalidate>
+                <div class="form-grid">
+
+                    <div class="field">
+                        <label for="name">Имя</label>
+                        <input id="name" name="name" type="text" placeholder="Например, Алексей" autocomplete="name">
+                    </div>
+
+                    <div class="field">
+                        <label for="contact">Телефон или Telegram</label>
+                        <input id="contact" name="contact" type="text" placeholder="+7... или @username">
+                    </div>
+
+                    <div class="field full">
+                        <label for="vacancy">Что интересно</label>
+                        <select id="vacancy" name="vacancy">
+                            <option value="">Выберите вариант</option>
+                            <option>Курьер</option>
+                            <option>Сборщик</option>
+                            <option>Подработка</option>
+                            <option>Работа без опыта</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button class="submit-btn" type="submit">Оставить заявку</button>
+
+                <div class="form-status" id="formStatus" aria-live="polite"></div>
+            </form>
 
         </div>
+
     </div>
 </section>
 
@@ -1048,59 +1473,45 @@
 
         <div class="section-head">
             <h2 class="section-title">Частые вопросы</h2>
-
             <p class="section-description">
-                Ответы на основные вопросы о поиске работы
-                и подработки в Новосибирске.
+                Этот блок позже тоже будем расширять по реальным вопросам
+                и поисковым запросам пользователей.
             </p>
         </div>
 
         <div class="faq">
-
             <details>
                 <summary>Можно ли найти работу без опыта?</summary>
-                <p>
-                    Да, на сайте будут отдельные вакансии и варианты
-                    занятости, где предыдущий опыт не требуется.
-                </p>
+                <p>Да. Мы планируем выделять отдельные варианты, где предыдущий опыт не является обязательным условием.</p>
             </details>
 
             <details>
                 <summary>Есть ли подработка на несколько часов?</summary>
-                <p>
-                    Мы отдельно будем собирать вакансии с частичной
-                    занятостью и гибкими вариантами графика.
-                </p>
+                <p>Для частичной занятости будет отдельный раздел с подходящими вариантами и условиями.</p>
             </details>
 
             <details>
                 <summary>Можно ли выбрать район?</summary>
-                <p>
-                    Если вакансия доступна в нескольких районах,
-                    эта информация будет указана на её странице.
-                </p>
+                <p>Если конкретная вакансия доступна в нескольких районах, это будет указано на её странице.</p>
             </details>
 
+            <details>
+                <summary>Как рассчитывается доход?</summary>
+                <p>Сейчас калькулятор демонстрационный. Перед реальным запуском расчёт будет основан только на фактических условиях выбранных вакансий.</p>
+            </details>
         </div>
+
     </div>
 </section>
 
 
 <section>
     <div class="container">
-
         <div class="final-box">
-            <h2>Найди подходящую работу</h2>
-
-            <p>
-                Посмотри доступные варианты в Новосибирске.
-            </p>
-
-            <a href="#vacancies" class="btn-main">
-                Смотреть вакансии
-            </a>
+            <h2>Найди свой вариант работы</h2>
+            <p>Сравни вакансии, график и условия — и оставь короткую заявку.</p>
+            <a href="#apply" class="btn-main">Откликнуться</a>
         </div>
-
     </div>
 </section>
 
@@ -1108,13 +1519,15 @@
 
 
 <footer>
-    <div class="container">
-        © 2026 РаботаНСК
+    <div class="container footer-row">
+        <div>© 2026 РаботаНСК — учебный прототип</div>
+        <div>Новосибирск</div>
     </div>
 </footer>
 
 
 <script>
+    const jobType = document.getElementById("jobType");
     const hoursSlider = document.getElementById("hours");
     const daysSlider = document.getElementById("days");
 
@@ -1124,8 +1537,19 @@
     const dayIncome = document.getElementById("dayIncome");
     const weekIncome = document.getElementById("weekIncome");
     const monthIncome = document.getElementById("monthIncome");
+    const rateNote = document.getElementById("rateNote");
 
-    const TEST_RATE = 450;
+    const demoRates = {
+        courier: 450,
+        picker: 380,
+        parttime: 350
+    };
+
+    const demoLabels = {
+        courier: "Курьер",
+        picker: "Сборщик",
+        parttime: "Подработка"
+    };
 
     function formatMoney(number) {
         return new Intl.NumberFormat("ru-RU").format(number) + " ₽";
@@ -1134,8 +1558,10 @@
     function calculateIncome() {
         const hours = Number(hoursSlider.value);
         const days = Number(daysSlider.value);
+        const selected = jobType.value;
+        const rate = demoRates[selected];
 
-        const incomeDay = hours * TEST_RATE;
+        const incomeDay = hours * rate;
         const incomeWeek = incomeDay * days;
         const incomeMonth = Math.round(incomeWeek * 4.33);
 
@@ -1145,12 +1571,39 @@
         dayIncome.textContent = formatMoney(incomeDay);
         weekIncome.textContent = formatMoney(incomeWeek);
         monthIncome.textContent = formatMoney(incomeMonth);
+
+        rateNote.textContent =
+            "Учебная модель: " + demoLabels[selected] + " — условная ставка " +
+            rate + " ₽/час. Эти суммы не являются обещанием дохода.";
     }
 
+    jobType.addEventListener("change", calculateIncome);
     hoursSlider.addEventListener("input", calculateIncome);
     daysSlider.addEventListener("input", calculateIncome);
 
     calculateIncome();
+
+
+    const applyForm = document.getElementById("applyForm");
+    const formStatus = document.getElementById("formStatus");
+
+    applyForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const contact = document.getElementById("contact").value.trim();
+        const vacancy = document.getElementById("vacancy").value;
+
+        if (!name || !contact || !vacancy) {
+            formStatus.textContent = "Заполни имя, контакт и выбери направление.";
+            formStatus.style.color = "#b42318";
+            return;
+        }
+
+        formStatus.textContent =
+            "Форма работает. Сейчас это тест: данные никуда не отправлены. На следующем этапе подключим Telegram или другой канал.";
+        formStatus.style.color = "#16783a";
+    });
 </script>
 
 </body>
