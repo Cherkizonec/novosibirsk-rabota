@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Работа курьером в Новосибирске — вакансии курьера | РаботаНСК</title>
+  <meta name="description" content="Работа курьером в Новосибирске: пешие, вело- и автокурьеры. Сравните форматы занятости и оставьте одну заявку для подбора подходящего варианта.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#19b85b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Работа курьером в Новосибирске">
+  <meta property="og:description" content="Пешие, вело- и автокурьеры: сравнение форматов и подбор вариантов в Новосибирске.">
+
+  <style>
+    :root{
+      --green:#19b85b;--green2:#0d9849;--ink:#171a1d;--text:#25282c;--muted:#6e747b;
+      --bg:#f4f6f8;--card:#fff;--line:#e7eaed;--blue:#e8f2ff;--mint:#e8fbdc;
+      --yellow:#fff3bd;--shadow:0 18px 60px rgba(20,25,30,.08)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    a{color:inherit}
+    img{display:block;max-width:100%}
+    .container{width:min(1160px,calc(100% - 40px));margin:auto}
+
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(15px);border-bottom:1px solid rgba(0,0,0,.06)}
+    .header-inner{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .logo{font-size:25px;font-weight:950;letter-spacing:-1px;text-decoration:none}
+    .logo span{color:var(--green)}
+    nav{display:flex;gap:21px;align-items:center}
+    nav a{text-decoration:none;font-size:14px;font-weight:850;color:#4a4f55}
+    .header-btn{background:var(--green);color:#fff;text-decoration:none;font-weight:900;padding:13px 19px;border-radius:14px}
+
+    .breadcrumbs{padding:22px 0 0;font-size:14px;color:var(--muted)}
+    .breadcrumbs a{text-decoration:none}
+
+    .hero{padding:20px 0 32px}
+    .hero-box{
+      min-height:520px;border-radius:36px;overflow:hidden;display:grid;grid-template-columns:1.06fr .94fr;
+      background:radial-gradient(circle at 18% 14%,#ffffffb5 0 8%,transparent 28%),linear-gradient(135deg,#eaffd0,#bdf478 55%,#70d97a);
+      box-shadow:var(--shadow)
+    }
+    .hero-copy{padding:62px 28px 56px 62px;display:flex;flex-direction:column;justify-content:center}
+    .eyebrow{display:inline-flex;align-self:flex-start;background:#fff;padding:9px 13px;border-radius:999px;font-weight:850;font-size:14px;margin-bottom:20px}
+    h1{font-size:clamp(43px,5vw,66px);line-height:1;letter-spacing:-3px;margin:0 0 22px;max-width:700px}
+    .hero-copy p{font-size:19px;line-height:1.55;color:#3b463e;margin:0 0 27px;max-width:620px}
+    .hero-actions{display:flex;gap:11px;flex-wrap:wrap}
+    .btn{min-height:52px;display:inline-flex;align-items:center;justify-content:center;padding:0 23px;border-radius:15px;text-decoration:none;font-weight:900}
+    .btn-dark{background:#17191b;color:#fff}
+    .btn-white{background:#fff}
+    .hero-photo{position:relative;min-height:520px;padding:34px 38px 0 10px;display:flex;align-items:flex-end;justify-content:center}
+    .hero-photo:before{content:"";position:absolute;width:360px;height:360px;border-radius:50%;background:#ffffff88;top:65px;right:58px}
+    .hero-photo img{position:relative;z-index:2;width:100%;max-width:460px;max-height:490px;object-fit:cover;object-position:center top;border-radius:34px 34px 0 0;box-shadow:0 25px 70px #25351d30}
+
+    section{padding:58px 0}
+    .section-head{display:flex;justify-content:space-between;gap:25px;align-items:end;margin-bottom:27px}
+    .section-head h2{font-size:clamp(31px,3.5vw,45px);letter-spacing:-1.8px;line-height:1.05;margin:0}
+    .section-head p{max-width:570px;color:var(--muted);line-height:1.55;margin:0}
+
+    .quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .quick{background:#fff;border:1px solid var(--line);border-radius:22px;padding:23px;min-height:170px}
+    .quick .icon{font-size:29px;margin-bottom:23px}
+    .quick strong{font-size:18px;display:block;margin-bottom:7px}
+    .quick p{font-size:14px;line-height:1.5;color:var(--muted);margin:0}
+
+    .type-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .type-card{background:#fff;border-radius:27px;padding:28px;border:1px solid var(--line);box-shadow:0 10px 36px rgba(20,25,30,.045)}
+    .type-card:nth-child(1){background:var(--mint)}
+    .type-card:nth-child(2){background:var(--blue)}
+    .type-card:nth-child(3){background:var(--yellow)}
+    .type-icon{font-size:36px;margin-bottom:28px}
+    .type-card h3{font-size:25px;letter-spacing:-.8px;margin:0 0 10px}
+    .type-card p{margin:0 0 19px;color:#52585f;line-height:1.55}
+    .tag-row{display:flex;flex-wrap:wrap;gap:7px}
+    .tag{background:#fff;padding:8px 10px;border-radius:999px;font-size:12px;font-weight:850}
+
+    .choose{background:#19201c;color:#fff;border-radius:34px;padding:48px}
+    .choose-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:50px;align-items:start}
+    .choose h2{font-size:42px;letter-spacing:-1.8px;line-height:1.03;margin:0 0 15px}
+    .choose p{color:#c7ccc9;line-height:1.6}
+    .checklist{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .check{background:#ffffff0d;border:1px solid #ffffff17;border-radius:18px;padding:18px;line-height:1.45}
+    .check b{display:block;color:#bff28d;margin-bottom:5px}
+
+    .employer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+    .employer{background:#fff;border:1px solid var(--line);border-radius:24px;padding:23px}
+    .employer-top{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+    .employer-logo{width:51px;height:51px;border-radius:16px;background:#f3f5f6;display:grid;place-items:center;font-size:25px}
+    .employer h3{margin:0 0 3px;font-size:20px}
+    .employer small{color:var(--muted)}
+    .employer p{color:#555c62;line-height:1.5;font-size:14px}
+    .employer a{font-weight:900;color:var(--green2);text-decoration:none}
+
+    .seo-text{background:#fff;border-radius:30px;padding:38px;border:1px solid var(--line)}
+    .seo-text h2{font-size:34px;letter-spacing:-1px;margin:0 0 18px}
+    .seo-text h3{font-size:23px;margin:28px 0 10px}
+    .seo-text p{line-height:1.75;color:#50565c;margin:0 0 13px}
+    .seo-text ul{line-height:1.75;color:#50565c;padding-left:22px}
+
+    .faq{display:grid;gap:10px}
+    details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 20px}
+    summary{cursor:pointer;font-weight:900;padding:20px 0;list-style:none}
+    summary::-webkit-details-marker{display:none}
+    details p{margin:0;padding:0 0 20px;line-height:1.6;color:#5b6167}
+
+    .cta{
+      background:linear-gradient(135deg,#d7ffad,#92e878);border-radius:35px;padding:52px;
+      display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center
+    }
+    .cta h2{font-size:40px;letter-spacing:-1.6px;line-height:1.05;margin:0 0 10px}
+    .cta p{margin:0;color:#465342;line-height:1.55;max-width:670px}
+
+    footer{margin-top:58px;background:#fff;border-top:1px solid var(--line);padding:35px 0 44px;color:#656b71;font-size:13px;line-height:1.65}
+    .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:flex-start}
+    .footer-links{display:flex;gap:15px;flex-wrap:wrap}
+    .footer-links a{color:#3d4247}
+
+    @media(max-width:900px){
+      nav{display:none}
+      .hero-box{grid-template-columns:1fr}
+      .hero-copy{padding:48px 28px 25px}
+      .hero-photo{min-height:390px;padding-top:0}
+      .hero-photo:before{right:50%;transform:translateX(50%)}
+      .quick-grid{grid-template-columns:1fr 1fr}
+      .type-grid,.employer-grid{grid-template-columns:1fr}
+      .choose-grid{grid-template-columns:1fr}
+      .cta{grid-template-columns:1fr}
+    }
+    @media(max-width:620px){
+      .container{width:min(100% - 24px,1160px)}
+      h1{font-size:42px;letter-spacing:-2px}
+      .hero-copy{padding:38px 22px 18px}
+      .hero-photo{min-height:330px;padding:20px 22px 0}
+      .hero-photo img{max-height:320px}
+      section{padding:42px 0}
+      .quick-grid,.checklist{grid-template-columns:1fr}
+      .choose,.cta,.seo-text{padding:27px}
+      .section-head{display:block}
+      .section-head p{margin-top:12px}
+      .footer-grid{display:block}
+      .footer-links{margin-top:17px}
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="logo" href="../">Работа<span>НСК</span></a>
+    <nav>
+      <a href="#formats">Форматы</a>
+      <a href="#employers">Работодатели</a>
+      <a href="#faq">Вопросы</a>
+      <a href="../#vacancies">Все вакансии</a>
+    </nav>
+    <a class="header-btn" href="../#apply">Подобрать работу</a>
+  </div>
+</header>
+
+<div class="container breadcrumbs">
+  <a href="../">Работа в Новосибирске</a> → Работа курьером
+</div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-box">
+        <div class="hero-copy">
+          <span class="eyebrow">🚴 Вакансии курьера в Новосибирске</span>
+          <h1>Работа курьером в Новосибирске</h1>
+          <p>Пешком, на велосипеде или на автомобиле. Сравните подходящие форматы занятости и оставьте одну заявку — без необходимости заполнять одинаковые анкеты несколько раз.</p>
+          <div class="hero-actions">
+            <a class="btn btn-dark" href="../#apply">Подобрать вариант</a>
+            <a class="btn btn-white" href="#formats">Сравнить форматы</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="../assets/samokat-worker.webp" alt="Курьер сервиса доставки в Новосибирске" width="460" height="490">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <h2>Что важно при выборе работы курьером</h2>
+        <p>Условия отличаются у разных работодателей, поэтому мы не обещаем одинаковый доход или график для всех вариантов.</p>
+      </div>
+      <div class="quick-grid">
+        <article class="quick"><div class="icon">📍</div><strong>Район работы</strong><p>Смотрите, насколько удобно добираться до зоны доставки или точки старта.</p></article>
+        <article class="quick"><div class="icon">🕒</div><strong>График</strong><p>Полная занятость, смены или подработка — доступность зависит от конкретной вакансии.</p></article>
+        <article class="quick"><div class="icon">🚲</div><strong>Способ доставки</strong><p>Пешком, на велосипеде или автомобиле — выбирайте формат под свои возможности.</p></article>
+        <article class="quick"><div class="icon">💳</div><strong>Условия выплат</strong><p>Периодичность и размер выплат необходимо смотреть в условиях конкретного работодателя.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="formats">
+    <div class="container">
+      <div class="section-head">
+        <h2>Какой формат курьера вам подходит</h2>
+        <p>Мы объединили основные варианты на одной странице, чтобы не создавать десятки почти одинаковых страниц.</p>
+      </div>
+      <div class="type-grid">
+        <article class="type-card">
+          <div class="type-icon">🚶</div>
+          <h3>Пеший курьер</h3>
+          <p>Подходит тем, кто хочет работать без автомобиля и велосипеда. Особенно важны компактная зона доставки и удобный район.</p>
+          <div class="tag-row"><span class="tag">без автомобиля</span><span class="tag">доставка пешком</span></div>
+        </article>
+        <article class="type-card">
+          <div class="type-icon">🚲</div>
+          <h3>Велокурьер</h3>
+          <p>Вариант для более быстрого перемещения по району. Условия по транспорту и экипировке зависят от вакансии.</p>
+          <div class="tag-row"><span class="tag">велосипед</span><span class="tag">активная работа</span></div>
+        </article>
+        <article class="type-card">
+          <div class="type-icon">🚗</div>
+          <h3>Автокурьер</h3>
+          <p>Подходит для доставки на большие расстояния. Перед откликом важно уточнить требования к автомобилю и компенсации расходов.</p>
+          <div class="tag-row"><span class="tag">на автомобиле</span><span class="tag">дальние маршруты</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container choose">
+      <div class="choose-grid">
+        <div>
+          <h2>Не выбирайте вакансию только по одной цифре</h2>
+          <p>Высокая сумма в объявлении сама по себе ещё не показывает, насколько вариант подходит именно вам. Лучше сравнить несколько условий одновременно.</p>
+        </div>
+        <div class="checklist">
+          <div class="check"><b>01 · Доход</b>Как считается оплата и от чего она зависит.</div>
+          <div class="check"><b>02 · Расстояние</b>Сколько времени займёт дорога до начала работы.</div>
+          <div class="check"><b>03 · График</b>Можно ли совмещать с учёбой или другой работой.</div>
+          <div class="check"><b>04 · Требования</b>Документы, транспорт и другие условия конкретной вакансии.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="employers">
+    <div class="container">
+      <div class="section-head">
+        <h2>Где искать работу курьером</h2>
+        <p>РаботаНСК — независимый сервис. Наличие конкретной вакансии и её условия необходимо подтверждать перед трудоустройством.</p>
+      </div>
+      <div class="employer-grid">
+        <article class="employer">
+          <div class="employer-top"><div class="employer-logo">🛵</div><div><h3>Сервисы быстрой доставки</h3><small>городская доставка</small></div></div>
+          <p>Один из самых очевидных вариантов для пеших и велокурьеров. Сравнивайте район, смены и фактические условия.</p>
+          <a href="../#apply">Подобрать вариант →</a>
+        </article>
+        <article class="employer">
+          <div class="employer-top"><div class="employer-logo">📦</div><div><h3>Маркетплейсы</h3><small>заказы и посылки</small></div></div>
+          <p>Курьерские задачи могут отличаться по типу заказов, маршрутам и используемому транспорту.</p>
+          <a href="../#apply">Подобрать вариант →</a>
+        </article>
+        <article class="employer">
+          <div class="employer-top"><div class="employer-logo">🛒</div><div><h3>Розничные сети</h3><small>доставка из магазинов</small></div></div>
+          <p>У крупных сетей и их сервисов доставки могут появляться варианты для доставки заказов покупателям.</p>
+          <a href="../#apply">Подобрать вариант →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container seo-text">
+      <h2>Вакансии курьера в Новосибирске</h2>
+      <p>Работа курьером остаётся одним из понятных вариантов для тех, кто рассматривает занятость в доставке. На этой странице мы собираем информацию именно по Новосибирску и помогаем сравнивать разные форматы: пеший курьер, велокурьер и курьер на автомобиле.</p>
+      <p>При выборе важно смотреть не только на заявленный доход. Итоговые условия могут зависеть от работодателя, количества смен, района, способа доставки, нагрузки и других параметров конкретной вакансии.</p>
+
+      <h3>Можно ли устроиться курьером без опыта?</h3>
+      <p>В некоторых вакансиях опыт может не требоваться, но требования отличаются. Поэтому при подборе мы рекомендуем проверять условия конкретного предложения, а не считать отсутствие опыта универсальным правилом для всех работодателей.</p>
+
+      <h3>Подработка курьером</h3>
+      <p>Если нужна не полная занятость, стоит обращать внимание на варианты с подходящими сменами или возможностью совмещения. Наличие такого графика зависит от конкретной компании и вакансии.</p>
+
+      <h3>Что подготовить перед откликом</h3>
+      <ul>
+        <li>определиться, какой район Новосибирска вам удобен;</li>
+        <li>выбрать пеший, велосипедный или автомобильный формат;</li>
+        <li>понять, сколько времени вы готовы уделять работе;</li>
+        <li>сравнить требования и условия нескольких предложений.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container">
+      <div class="section-head">
+        <h2>Частые вопросы</h2>
+        <p>Коротко о том, что обычно важно перед откликом на работу курьером.</p>
+      </div>
+      <div class="faq">
+        <details><summary>Можно ли работать курьером без опыта?</summary><p>Это зависит от конкретной вакансии. У части работодателей могут быть позиции без обязательного опыта, но требования нужно проверять перед откликом.</p></details>
+        <details><summary>Обязательно ли иметь автомобиль?</summary><p>Нет. Существуют пешие, велосипедные и автомобильные форматы доставки. Доступность каждого варианта зависит от работодателя.</p></details>
+        <details><summary>Можно ли рассматривать работу курьером как подработку?</summary><p>Да, если у конкретной вакансии есть подходящий вам график или смены. РаботаНСК помогает сравнить варианты, но не устанавливает график работодателей.</p></details>
+        <details><summary>Сколько зарабатывает курьер в Новосибирске?</summary><p>Единой гарантированной суммы нет. Доход зависит от компании, формата работы, графика, количества заказов и других условий. Точную модель оплаты нужно смотреть в конкретной вакансии.</p></details>
+        <details><summary>РаботаНСК является работодателем?</summary><p>Нет. РаботаНСК — независимый сервис подбора и сравнения вакансий. Трудоустройство и окончательные условия определяются конкретным работодателем.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container cta">
+      <div>
+        <h2>Подберём вариант работы курьером</h2>
+        <p>Оставьте одну заявку на главной странице и укажите, какой формат и работодатель вам интересны. Отправка формы пока находится на этапе технической подготовки.</p>
+      </div>
+      <a class="btn btn-dark" href="../#apply">Перейти к анкете</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div>
+      © 2026 РаботаНСК · независимый сервис подбора вакансий<br>
+      Оператор: ООО «Работа» · ИНН 7720488793 · ОГРН 1197746711821<br>
+      Названия и товарные знаки компаний принадлежат их владельцам.
+    </div>
+    <div class="footer-links">
+      <a href="../privacy.html">Политика обработки ПД</a>
+      <a href="../consent.html">Согласие на обработку ПД</a>
+      <a href="../terms.html">Пользовательское соглашение</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
