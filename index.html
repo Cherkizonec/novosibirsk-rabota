@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Работа и подработка в Новосибирске</title>
+    <title>Работа и подработка в Новосибирске — вакансии без опыта</title>
 
     <meta name="description"
-          content="Работа и подработка в Новосибирске. Вакансии без опыта, свободный график, различные районы города. Выберите подходящий вариант и оставьте заявку.">
+          content="Работа и подработка в Новосибирске. Выберите подходящую вакансию, график и район. Есть варианты без опыта.">
 
     <style>
         * {
@@ -21,307 +20,603 @@
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f6f7f8;
-            color: #171717;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f6f7;
+            color: #151515;
+        }
+
+        a {
+            color: inherit;
         }
 
         .container {
-            width: min(1160px, calc(100% - 40px));
+            width: min(1180px, calc(100% - 40px));
             margin: 0 auto;
         }
 
+        /* ШАПКА */
+
         header {
-            background: white;
+            background: rgba(255,255,255,0.96);
             border-bottom: 1px solid #ececec;
+            position: sticky;
+            top: 0;
+            z-index: 100;
         }
 
         .header-inner {
-            min-height: 72px;
+            min-height: 74px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 30px;
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 23px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #16b957;
+        }
+
+        nav {
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        nav a:hover {
+            color: #16b957;
+        }
+
+        .header-btn {
+            text-decoration: none;
+            background: #16c55f;
+            padding: 14px 21px;
+            color: white;
+            border-radius: 13px;
             font-weight: 800;
         }
 
-        .header-button {
-            text-decoration: none;
-            background: #22c55e;
-            color: white;
-            padding: 13px 20px;
-            border-radius: 12px;
-            font-weight: 700;
-        }
+        /* ПЕРВЫЙ ЭКРАН */
 
         .hero {
-            padding: 70px 0;
+            padding: 34px 0 20px;
         }
 
         .hero-box {
-            background: #d9f99d;
-            border-radius: 32px;
-            padding: 65px;
-            position: relative;
+            min-height: 590px;
+            border-radius: 34px;
+            background:
+                radial-gradient(circle at 75% 20%, rgba(255,255,255,.4), transparent 30%),
+                linear-gradient(135deg, #bdf269, #85e85c);
             overflow: hidden;
+
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            position: relative;
         }
 
-        .hero-content {
-            max-width: 720px;
+        .hero-left {
+            padding: 64px;
             position: relative;
             z-index: 2;
         }
 
-        .city {
-            display: inline-block;
-            background: white;
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             padding: 9px 14px;
-            border-radius: 50px;
+            background: rgba(255,255,255,.88);
+            border-radius: 100px;
             font-size: 14px;
-            font-weight: 700;
-            margin-bottom: 22px;
+            font-weight: 800;
+            margin-bottom: 24px;
         }
 
-        h1 {
-            font-size: 56px;
-            line-height: 1.05;
-            margin: 0 0 22px;
-            letter-spacing: -2px;
+        .hero h1 {
+            font-size: 64px;
+            line-height: .98;
+            letter-spacing: -3px;
+            margin: 0 0 25px;
+            max-width: 700px;
         }
 
-        .hero p {
-            font-size: 21px;
+        .hero-subtitle {
+            font-size: 20px;
             line-height: 1.55;
-            max-width: 620px;
-            margin-bottom: 30px;
-            color: #374151;
+            max-width: 580px;
+            color: #31412f;
+            margin: 0 0 28px;
         }
 
-        .main-button {
-            display: inline-block;
-            text-decoration: none;
-            background: #171717;
-            color: white;
-            padding: 17px 26px;
-            border-radius: 14px;
-            font-weight: 700;
-            font-size: 17px;
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
         }
+
+        .btn-main {
+            display: inline-block;
+            background: #151515;
+            color: white;
+            text-decoration: none;
+            padding: 17px 25px;
+            border-radius: 14px;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .btn-light {
+            display: inline-block;
+            background: rgba(255,255,255,.75);
+            color: #151515;
+            text-decoration: none;
+            padding: 17px 23px;
+            border-radius: 14px;
+            font-weight: 800;
+        }
+
+        /* ПРАВАЯ ЧАСТЬ HERO */
+
+        .hero-right {
+            position: relative;
+            min-height: 590px;
+        }
+
+        .person-circle {
+            position: absolute;
+            width: 430px;
+            height: 430px;
+            border-radius: 50%;
+            background: rgba(255,255,255,.34);
+            right: 15px;
+            bottom: -55px;
+        }
+
+        .person {
+            position: absolute;
+            bottom: 30px;
+            right: 80px;
+            font-size: 260px;
+            filter: drop-shadow(0 25px 25px rgba(0,0,0,.12));
+        }
+
+        .income-card {
+            position: absolute;
+            top: 80px;
+            right: 45px;
+            background: white;
+            padding: 18px 22px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.12);
+        }
+
+        .income-card small {
+            display: block;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .income-card strong {
+            font-size: 27px;
+        }
+
+        .schedule-card {
+            position: absolute;
+            left: 15px;
+            bottom: 80px;
+            background: #151515;
+            color: white;
+            padding: 16px 20px;
+            border-radius: 18px;
+            box-shadow: 0 20px 50px rgba(0,0,0,.15);
+        }
+
+        .schedule-card strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .schedule-card span {
+            color: #cbcbcb;
+            font-size: 14px;
+        }
+
+        /* БЛОКИ */
 
         section {
-            padding: 55px 0;
+            padding: 65px 0;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 32px;
         }
 
         .section-title {
-            font-size: 38px;
-            margin: 0 0 30px;
+            font-size: 42px;
+            letter-spacing: -1.5px;
+            margin: 0;
         }
 
-        .advantages {
+        .section-description {
+            max-width: 460px;
+            color: #70757d;
+            line-height: 1.55;
+            margin: 0;
+        }
+
+        /* КАТЕГОРИИ */
+
+        .categories {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 18px;
+            gap: 16px;
         }
 
-        .advantage {
+        .category {
             background: white;
-            border-radius: 22px;
             padding: 28px;
-            min-height: 180px;
+            min-height: 230px;
+            border-radius: 24px;
+            text-decoration: none;
+            position: relative;
+            transition: .2s;
         }
 
-        .advantage-icon {
-            font-size: 34px;
-            margin-bottom: 25px;
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(0,0,0,.08);
         }
 
-        .advantage h3 {
-            font-size: 20px;
+        .category-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 27px;
+            background: #e9ffd2;
+            margin-bottom: 35px;
+        }
+
+        .category h3 {
+            font-size: 23px;
             margin: 0 0 10px;
         }
 
-        .advantage p {
-            color: #6b7280;
+        .category p {
+            color: #777;
             line-height: 1.5;
             margin: 0;
         }
 
-        .vacancies {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
+        .category-arrow {
+            position: absolute;
+            right: 25px;
+            bottom: 22px;
+            font-size: 23px;
         }
 
-        .vacancy {
-            background: white;
+        /* ВАКАНСИЯ ДНЯ */
+
+        .feature {
+            background: #171717;
+            color: white;
+            border-radius: 32px;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            gap: 50px;
+        }
+
+        .feature-tag {
+            display: inline-block;
+            color: #101010;
+            background: #a6ed64;
+            padding: 8px 13px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .feature h2 {
+            font-size: 44px;
+            margin: 0 0 20px;
+        }
+
+        .feature-text {
+            color: #c3c3c3;
+            font-size: 18px;
+            line-height: 1.55;
+        }
+
+        .feature-info {
+            background: #252525;
             border-radius: 24px;
             padding: 30px;
         }
 
-        .vacancy-tag {
-            display: inline-block;
-            background: #ecfdf5;
-            color: #15803d;
-            padding: 7px 11px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 17px;
+        .feature-row {
+            padding: 17px 0;
+            border-bottom: 1px solid #3b3b3b;
         }
 
-        .vacancy h3 {
-            font-size: 27px;
-            margin: 0 0 18px;
+        .feature-row:last-child {
+            border-bottom: 0;
         }
 
-        .vacancy-info {
-            color: #4b5563;
-            line-height: 1.8;
-            margin-bottom: 22px;
+        .feature-row small {
+            display: block;
+            color: #909090;
+            margin-bottom: 6px;
         }
 
-        .vacancy-button {
-            display: inline-block;
-            text-decoration: none;
-            color: #171717;
-            font-weight: 700;
-            border-bottom: 2px solid #22c55e;
-            padding-bottom: 4px;
+        .feature-row strong {
+            font-size: 19px;
         }
 
-        .steps {
-            background: #171717;
-            color: white;
+        /* ПРЕИМУЩЕСТВА */
+
+        .advantages {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 17px;
+        }
+
+        .advantage {
+            border-radius: 25px;
+            padding: 30px;
+            background: white;
+        }
+
+        .advantage:nth-child(2) {
+            background: #e8ffd4;
+        }
+
+        .advantage:nth-child(5) {
+            background: #dff4ff;
+        }
+
+        .advantage-icon {
+            font-size: 34px;
+            margin-bottom: 30px;
+        }
+
+        .advantage h3 {
+            font-size: 22px;
+            margin: 0 0 10px;
+        }
+
+        .advantage p {
+            color: #747474;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* КАК НАЧАТЬ */
+
+        .steps-box {
+            background: white;
             border-radius: 30px;
             padding: 50px;
         }
 
-        .steps .section-title {
-            color: white;
-        }
-
-        .steps-grid {
+        .steps {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 38px;
         }
 
         .step-number {
-            width: 44px;
-            height: 44px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #22c55e;
-            border-radius: 50%;
-            font-weight: 800;
-            margin-bottom: 18px;
+            font-size: 48px;
+            font-weight: 900;
+            color: #b5ec78;
+            margin-bottom: 20px;
         }
 
         .step h3 {
-            font-size: 21px;
-            margin-bottom: 10px;
+            font-size: 20px;
+            margin: 0 0 10px;
         }
 
         .step p {
-            color: #c7c7c7;
+            margin: 0;
+            color: #777;
             line-height: 1.5;
         }
 
-        .final {
-            text-align: center;
-            padding-bottom: 90px;
+        /* FAQ */
+
+        .faq {
+            display: grid;
+            gap: 12px;
         }
+
+        details {
+            background: white;
+            border-radius: 18px;
+            padding: 22px 25px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 18px;
+        }
+
+        details p {
+            color: #686868;
+            line-height: 1.55;
+        }
+
+        /* ФИНАЛ */
 
         .final-box {
-            background: white;
-            border-radius: 28px;
-            padding: 55px 30px;
+            background: #a8ef67;
+            border-radius: 32px;
+            text-align: center;
+            padding: 65px 30px;
         }
 
-        .final h2 {
-            font-size: 38px;
+        .final-box h2 {
+            font-size: 46px;
             margin: 0 0 15px;
         }
 
-        .final p {
-            color: #6b7280;
+        .final-box p {
             font-size: 18px;
-            margin-bottom: 25px;
+            color: #405335;
+            margin-bottom: 27px;
         }
 
         footer {
-            padding: 30px 0;
-            color: #737373;
+            padding: 30px 0 45px;
+            color: #777;
             font-size: 14px;
         }
 
-        @media (max-width: 850px) {
+        /* МОБИЛЬНАЯ ВЕРСИЯ */
+
+        @media (max-width: 900px) {
+            nav {
+                display: none;
+            }
+
+            .hero-box {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-right {
+                min-height: 390px;
+            }
+
+            .hero h1 {
+                font-size: 52px;
+            }
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .advantages {
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .vacancies {
+            .feature {
                 grid-template-columns: 1fr;
-            }
-
-            .steps-grid {
-                grid-template-columns: 1fr;
-            }
-
-            h1 {
-                font-size: 43px;
-            }
-
-            .hero-box {
-                padding: 45px 35px;
-            }
-        }
-
-        @media (max-width: 550px) {
-            .container {
-                width: min(100% - 24px, 1160px);
-            }
-
-            .header-button {
-                display: none;
-            }
-
-            .hero {
-                padding: 25px 0;
-            }
-
-            .hero-box {
-                padding: 35px 24px;
-                border-radius: 24px;
-            }
-
-            h1 {
-                font-size: 38px;
-                letter-spacing: -1px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .advantages {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 31px;
-            }
-
-            section {
-                padding: 40px 0;
             }
 
             .steps {
-                padding: 35px 25px;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 580px) {
+            .container {
+                width: calc(100% - 24px);
+            }
+
+            .header-btn {
+                font-size: 13px;
+                padding: 12px 14px;
+            }
+
+            .hero {
+                padding-top: 15px;
+            }
+
+            .hero-box {
+                border-radius: 25px;
+            }
+
+            .hero-left {
+                padding: 35px 24px;
+            }
+
+            .hero h1 {
+                font-size: 42px;
+                letter-spacing: -2px;
+            }
+
+            .hero-subtitle {
+                font-size: 17px;
+            }
+
+            .hero-right {
+                min-height: 300px;
+            }
+
+            .person {
+                font-size: 190px;
+                right: 35px;
+            }
+
+            .person-circle {
+                width: 300px;
+                height: 300px;
+            }
+
+            .income-card {
+                top: 15px;
+                right: 15px;
+            }
+
+            .schedule-card {
+                left: 15px;
+                bottom: 25px;
+            }
+
+            section {
+                padding: 45px 0;
+            }
+
+            .section-head {
+                display: block;
+            }
+
+            .section-title {
+                font-size: 34px;
+                margin-bottom: 12px;
+            }
+
+            .categories,
+            .advantages,
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .feature {
+                padding: 30px 24px;
+            }
+
+            .feature h2 {
+                font-size: 35px;
+            }
+
+            .steps-box {
+                padding: 30px 24px;
+            }
+
+            .final-box h2 {
+                font-size: 35px;
             }
         }
     </style>
@@ -331,227 +626,388 @@
 
 <header>
     <div class="container header-inner">
-        <div class="logo">Работа НСК</div>
 
-        <a class="header-button" href="#vacancies">
+        <div class="logo">
+            Работа<span>НСК</span>
+        </div>
+
+        <nav>
+            <a href="#vacancies">Вакансии</a>
+            <a href="#advantages">Преимущества</a>
+            <a href="#steps">Как начать</a>
+            <a href="#faq">Вопросы</a>
+        </nav>
+
+        <a href="#vacancies" class="header-btn">
             Найти работу
         </a>
+
     </div>
 </header>
 
 
 <main>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-box">
+<section class="hero">
 
-                <div class="hero-content">
+    <div class="container">
 
-                    <div class="city">
-                        📍 Новосибирск
-                    </div>
+        <div class="hero-box">
 
-                    <h1>
-                        Работа, которая подходит под твой ритм
-                    </h1>
+            <div class="hero-left">
 
-                    <p>
-                        Подработка и вакансии в Новосибирске.
-                        Выбирайте удобный график, подходящий район
-                        и формат занятости.
-                    </p>
+                <div class="eyebrow">
+                    📍 Работа и подработка в Новосибирске
+                </div>
 
-                    <a class="main-button" href="#vacancies">
+                <h1>
+                    Работа под твой ритм жизни
+                </h1>
+
+                <p class="hero-subtitle">
+                    Выбирай удобный график, подходящий район
+                    и формат занятости. Есть варианты для старта без опыта.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#vacancies" class="btn-main">
                         Смотреть вакансии
                     </a>
 
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="container">
-
-            <h2 class="section-title">
-                Почему удобно
-            </h2>
-
-            <div class="advantages">
-
-                <div class="advantage">
-                    <div class="advantage-icon">🕒</div>
-                    <h3>Разный график</h3>
-                    <p>
-                        Выбирайте варианты занятости под своё расписание.
-                    </p>
-                </div>
-
-                <div class="advantage">
-                    <div class="advantage-icon">🚀</div>
-                    <h3>Можно без опыта</h3>
-                    <p>
-                        Есть предложения для тех, кто только начинает работать.
-                    </p>
-                </div>
-
-                <div class="advantage">
-                    <div class="advantage-icon">📍</div>
-                    <h3>Новосибирск</h3>
-                    <p>
-                        Ищем варианты работы в разных районах города.
-                    </p>
-                </div>
-
-                <div class="advantage">
-                    <div class="advantage-icon">📱</div>
-                    <h3>Простой отклик</h3>
-                    <p>
-                        Выберите вакансию и оставьте заявку онлайн.
-                    </p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="vacancies">
-        <div class="container">
-
-            <h2 class="section-title">
-                Актуальные вакансии
-            </h2>
-
-            <div class="vacancies">
-
-                <article class="vacancy">
-
-                    <div class="vacancy-tag">
-                        Без опыта
-                    </div>
-
-                    <h3>
-                        Работа со свободным графиком
-                    </h3>
-
-                    <div class="vacancy-info">
-                        📍 Новосибирск<br>
-                        🕒 Гибкий график<br>
-                        🎓 Опыт не обязателен
-                    </div>
-
-                    <a class="vacancy-button" href="#">
-                        Подробнее →
+                    <a href="#steps" class="btn-light">
+                        Как начать
                     </a>
 
-                </article>
-
-
-                <article class="vacancy">
-
-                    <div class="vacancy-tag">
-                        Подработка
-                    </div>
-
-                    <h3>
-                        Подработка на несколько часов
-                    </h3>
-
-                    <div class="vacancy-info">
-                        📍 Новосибирск<br>
-                        🕒 Частичная занятость<br>
-                        🎓 Подходит без опыта
-                    </div>
-
-                    <a class="vacancy-button" href="#">
-                        Подробнее →
-                    </a>
-
-                </article>
+                </div>
 
             </div>
 
-        </div>
-    </section>
 
+            <div class="hero-right">
 
-    <section>
-        <div class="container">
+                <div class="person-circle"></div>
 
-            <div class="steps">
+                <div class="person">
+                    🧑‍💼
+                </div>
 
-                <h2 class="section-title">
-                    Как начать
-                </h2>
+                <div class="income-card">
+                    <small>Варианты дохода</small>
+                    <strong>зависят от вакансии</strong>
+                </div>
 
-                <div class="steps-grid">
-
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Выберите вакансию</h3>
-                        <p>
-                            Посмотрите условия и выберите подходящий вариант.
-                        </p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Оставьте заявку</h3>
-                        <p>
-                            Это займёт всего несколько минут.
-                        </p>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Получите ответ</h3>
-                        <p>
-                            С вами свяжутся и расскажут подробности.
-                        </p>
-                    </div>
-
+                <div class="schedule-card">
+                    <strong>Удобный график</strong>
+                    <span>Выбирай подходящий вариант</span>
                 </div>
 
             </div>
 
         </div>
-    </section>
+
+    </div>
+
+</section>
 
 
-    <section class="final">
-        <div class="container">
+<section id="vacancies">
 
-            <div class="final-box">
+    <div class="container">
+
+        <div class="section-head">
+
+            <h2 class="section-title">
+                Выбери, что тебе подходит
+            </h2>
+
+            <p class="section-description">
+                Разные форматы занятости в Новосибирске —
+                от подработки на несколько часов до постоянной работы.
+            </p>
+
+        </div>
+
+
+        <div class="categories">
+
+            <a class="category" href="#">
+                <div class="category-icon">🚴</div>
+                <h3>Курьер</h3>
+                <p>Работа и подработка с гибким графиком.</p>
+                <div class="category-arrow">→</div>
+            </a>
+
+            <a class="category" href="#">
+                <div class="category-icon">📦</div>
+                <h3>Сборщик</h3>
+                <p>Варианты работы в разных районах города.</p>
+                <div class="category-arrow">→</div>
+            </a>
+
+            <a class="category" href="#">
+                <div class="category-icon">⏱️</div>
+                <h3>Подработка</h3>
+                <p>Когда нужна занятость на несколько часов.</p>
+                <div class="category-arrow">→</div>
+            </a>
+
+            <a class="category" href="#">
+                <div class="category-icon">🚀</div>
+                <h3>Без опыта</h3>
+                <p>Варианты для тех, кто только начинает.</p>
+                <div class="category-arrow">→</div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="feature">
+
+            <div>
+
+                <div class="feature-tag">
+                    ВАКАНСИЯ ДНЯ
+                </div>
 
                 <h2>
-                    Найдите подходящий вариант
+                    Работа со свободным графиком
                 </h2>
 
-                <p>
-                    Посмотрите доступные вакансии в Новосибирске.
+                <p class="feature-text">
+                    Вариант для тех, кому важно совмещать работу
+                    с учёбой, основной занятостью или личными делами.
                 </p>
 
-                <a class="main-button" href="#vacancies">
-                    Смотреть вакансии
+                <a href="#" class="btn-main"
+                   style="background:#a6ed64;color:#111;margin-top:15px;">
+                    Посмотреть условия
                 </a>
 
             </div>
 
+
+            <div class="feature-info">
+
+                <div class="feature-row">
+                    <small>Город</small>
+                    <strong>Новосибирск</strong>
+                </div>
+
+                <div class="feature-row">
+                    <small>График</small>
+                    <strong>Есть гибкие варианты</strong>
+                </div>
+
+                <div class="feature-row">
+                    <small>Опыт</small>
+                    <strong>Есть вакансии без опыта</strong>
+                </div>
+
+                <div class="feature-row">
+                    <small>Формат</small>
+                    <strong>Работа / подработка</strong>
+                </div>
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
+
+
+<section id="advantages">
+
+    <div class="container">
+
+        <h2 class="section-title" style="margin-bottom:32px;">
+            Почему удобно
+        </h2>
+
+        <div class="advantages">
+
+            <div class="advantage">
+                <div class="advantage-icon">🕒</div>
+                <h3>Разный график</h3>
+                <p>Ищи работу под своё расписание.</p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">📍</div>
+                <h3>Разные районы</h3>
+                <p>Можно выбирать варианты ближе к себе.</p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">🎓</div>
+                <h3>Без опыта</h3>
+                <p>Есть предложения для начинающих.</p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">📱</div>
+                <h3>Простой отклик</h3>
+                <p>Не нужно заполнять длинную анкету.</p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">⚡</div>
+                <h3>Быстрый старт</h3>
+                <p>Выбирай вакансию и узнавай условия.</p>
+            </div>
+
+            <div class="advantage">
+                <div class="advantage-icon">🔎</div>
+                <h3>Выбор вакансий</h3>
+                <p>Сравнивай разные варианты занятости.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="steps">
+
+    <div class="container">
+
+        <div class="steps-box">
+
+            <h2 class="section-title">
+                Начать просто
+            </h2>
+
+            <div class="steps">
+
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Выбери вакансию</h3>
+                    <p>Посмотри доступные варианты.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Изучи условия</h3>
+                    <p>График, район и формат работы.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Оставь заявку</h3>
+                    <p>Укажи основные данные для связи.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3>Получи ответ</h3>
+                    <p>Уточни детали и дальнейшие шаги.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="faq">
+
+    <div class="container">
+
+        <div class="section-head">
+
+            <h2 class="section-title">
+                Частые вопросы
+            </h2>
+
+            <p class="section-description">
+                Ответы на основные вопросы о поиске работы
+                и подработки в Новосибирске.
+            </p>
+
+        </div>
+
+
+        <div class="faq">
+
+            <details>
+                <summary>Можно ли найти работу без опыта?</summary>
+                <p>
+                    Да, на сайте будут отдельные вакансии и варианты
+                    занятости, где предыдущий опыт не требуется.
+                </p>
+            </details>
+
+            <details>
+                <summary>Есть ли подработка на несколько часов?</summary>
+                <p>
+                    Мы отдельно будем собирать вакансии с частичной
+                    занятостью и гибкими вариантами графика.
+                </p>
+            </details>
+
+            <details>
+                <summary>Можно ли выбрать район?</summary>
+                <p>
+                    Если вакансия доступна в нескольких районах,
+                    эта информация будет указана на её странице.
+                </p>
+            </details>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="final-box">
+
+            <h2>
+                Найди подходящую работу
+            </h2>
+
+            <p>
+                Посмотри доступные варианты в Новосибирске.
+            </p>
+
+            <a href="#vacancies" class="btn-main">
+                Смотреть вакансии
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
 
 </main>
 
 
 <footer>
+
     <div class="container">
-        © 2026 Работа НСК
+        © 2026 РаботаНСК
     </div>
+
 </footer>
 
 </body>
